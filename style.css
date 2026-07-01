@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+::-webkit-scrollbar {
+  width: 10 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ea580c;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #101010;
+}
+/* | CSS colour | Tailwind class             |
+| ---------- | -------------------------- |
+| `#080808`  | `bg-[#080808]`             |
+| `#101010`  | `bg-[#101010]`             |
+| `white`    | `text-white` or `bg-white` |
+| `#ea580c`  | `orange-600`               | */
+
+/* html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body {
+  background: #080808;
+  color: white;
+} */
+
+#menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1285px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid #ea580c;
+    border-bottom: 2px solid #ea580c;
+    display: none;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 3rem;
+    margin: 3rem 0;
+    color: white;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .gradient-btn {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 56vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .about img {
+    width: 52vw;
+    align-items: center;
+  }
+
+  .contact-form {
+    flex-direction: column;
+  }
+}
